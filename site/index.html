@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Renata Razera — Psicanalista</title>
-<meta name="description" content="Atendimento psicanalítico online para crianças, adolescentes, adultos e idosos. Renata Razera, psicanalista pelo CEP.">
+<meta name="description" content="Atendimento psicanalítico online e presencial para crianças, adolescentes, adultos e idosos. Renata Razera, psicanalista pelo CEP e especialização no Instituto de Psiquiatria HCFMUSP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="canonical" href="https://renatarareza.com.br/">
+<link rel="preload" as="image" href="heroDesktop.jpg" media="(min-width: 769px)">
+<link rel="preload" as="image" href="heroMobile.jpg" media="(max-width: 768px)">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Renata Razera">
 <meta name="keywords" content="psicanalista, psicanálise on-line, terapia on-line São Paulo, psicanalista on-line, ansiedade, depressão, autoconhecimento">
@@ -26,15 +28,18 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://renatarareza.com.br/">
 <meta property="og:title" content="Renata Razera — Psicanalista">
-<meta property="og:description" content="Atendimento psicanalítico on-line para adolescentes, adultos e idosos. Primeira sessão gratuita. Renata Razera, psicanalista pelo CEP.">
+<meta property="og:description" content="Atendimento psicanalítico online e presencial. Renata Razera, psicanalista pelo CEP e especialização no Instituto de Psiquiatria HCFMUSP.">
 <meta property="og:image" content="https://renatarareza.com.br/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Renata Razera Psicanalista">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Renata Razera — Psicanalista">
-<meta name="twitter:description" content="Atendimento psicanalítico on-line. Primeira sessão gratuita.">
+<meta name="twitter:description" content="Atendimento psicanalítico online e presencial. Renata Razera, psicanalista pelo CEP e especialização no Instituto de Psiquiatria HCFMUSP.">
 <meta name="twitter:image" content="https://renatarareza.com.br/og-image.jpg">
 
 <!-- Favicon inline SVG -->
@@ -209,10 +214,6 @@
   }
   .hero-bg .hero-bg-mobile {
     display: none;
-  }
-  .hero-bg-overlay {
-    position: absolute; inset: 70;
-    background: linear-gradient(to right, rgba(245,240,232,0.15) 0%, rgba(245,240,232,0.75) 45%, rgba(245,240,232,0.95) 65%, var(--creme) 85%);
   }
 
   .hero-text-col {
@@ -1028,9 +1029,8 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg">
-    <img src="heroDesktop.jpg" alt="Renata Razera, psicanalista" class="hero-bg-desktop">
-    <img src="heroMobile.jpg" alt="Renata Razera, psicanalista" class="hero-bg-mobile">
-    <div class="hero-bg-overlay"></div>
+    <img src="heroDesktop.jpg" alt="Renata Razera, psicanalista" class="hero-bg-desktop" fetchpriority="high">
+    <img src="heroMobile.jpg" alt="Renata Razera, psicanalista" class="hero-bg-mobile" fetchpriority="high">
   </div>
   <div class="hero-text-col">
     <p class="hero-eyebrow">Atendimento Presencial e Online</p>
@@ -1053,32 +1053,32 @@
 </h2>
     <div class="cards-grid">
       <div class="card reveal reveal-delay-1">
-        <div class="card-icon"><img src="icon-ansiedade.png" alt="Ansiedade"></div>
+        <div class="card-icon"><img src="icon-ansiedade.png" alt="Ansiedade" loading="lazy"></div>
         <h3>Ansiedade, angústia e depressão</h3>
         <p>Quando o sofrimento emocional deixa de ser passageiro e sensações de inquietação, tristeza ou esgotamento começam a afetar a forma de viver e parecer difíceis de compreender sozinho.</p>
       </div>
       <div class="card reveal reveal-delay-2">
-        <div class="card-icon"><img src="icon-padroes.png" alt="Padrões"></div>
-        <h3>Comportamentos Repetitivos e/ou autodestrutivos</h3>
+        <div class="card-icon"><img src="icon-padroes.png" alt="Padrões" loading="lazy"></div>
+        <h3>Comportamentos repetitivos e/ou autodestrutivos</h3>
         <p>Relacionamentos que sempre terminam igual, decisões que se repetem, sensações que voltam.</p>
       </div>
       <div class="card reveal reveal-delay-3">
-        <div class="card-icon"><img src="icon-depressao.png" alt="Depressão"></div>
-        <h3>Situações de Crise</h3>
+        <div class="card-icon"><img src="icon-depressao.png" alt="Depressão" loading="lazy"></div>
+        <h3>Situações de crise</h3>
         <p>Momentos em que o sofrimento transborda e as ferramentas habituais parecem não dar conta.&nbsp;&nbsp;</p>
       </div>
       <div class="card reveal reveal-delay-1">
-        <div class="card-icon"><img src="icon-relacionamentos.png" alt="Relacionamentos"></div>
+        <div class="card-icon"><img src="icon-relacionamentos.png" alt="Relacionamentos" loading="lazy"></div>
         <h3>Dificuldades nos relacionamentos</h3>
         <p>Conflitos interpessoais, dificuldade de se aproximar ou de se separar.</p>
       </div>
       <div class="card reveal reveal-delay-2">
-        <div class="card-icon"><img src="icon-transicoes.png" alt="Transições"></div>
-        <h3>Momentos de Transição</h3>
+        <div class="card-icon"><img src="icon-transicoes.png" alt="Transições" loading="lazy"></div>
+        <h3>Momentos de transição</h3>
         <p>Mudanças de carreira, perdas, novos ciclos, momentos em que algo precisa ser pensado com mais cuidado.</p>
       </div>
       <div class="card reveal reveal-delay-3">
-        <div class="card-icon"><img src="icon-autoconhecimento.png" alt="Autoconhecimento"></div>
+        <div class="card-icon"><img src="icon-autoconhecimento.png" alt="Autoconhecimento" loading="lazy"></div>
         <h3>Autoconhecimento</h3>
         <p>Para quem quer entender seus próprios movimentos, desejos e formas de se relacionar com o mundo.</p>
       </div>
@@ -1154,7 +1154,7 @@
       </div>
       <div class="beneficio-item reveal reveal-delay-2">
         <div class="beneficio-num">03</div>
-        <h3>Transformação Estrutural</h3>
+        <h3>Transformação estrutural</h3>
         <p>Conteúdos antes desconhecidos ou pouco elaborados tornam-se mais claros, promovendo a possibilidade de mudanças na forma de sentir, pensar e se relacionar,&nbsp;durante e após a análise.</p>
       </div>
     </div>
@@ -1176,7 +1176,7 @@
   <div class="section-inner">
     <div class="sobre-layout">
       <div class="sobre-img reveal">
-        <img src="RenataRazera-psicanalista-sobre.jpg" alt="Renata Razera" onerror="this.style.background='linear-gradient(135deg,#D9CEBC,#EDE5D8)';this.style.height='420px'">
+        <img src="RenataRazera-psicanalista-sobre.jpg" alt="Renata Razera" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#D9CEBC,#EDE5D8)';this.style.height='420px'">
         <div class="sobre-img-caption">
           <strong>Renata Razera</strong>
           <p>Psicanalista</p>

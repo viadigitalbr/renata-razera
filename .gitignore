@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Arquivos de identidade visual (PSDs, fotos brutas) - nao vao pro site
+Identidade/
+*.psd
+site/.claude/
