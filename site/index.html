@@ -496,11 +496,40 @@
   }
 
   /* ── COMO FUNCIONA ── */
-  #como-funciona { background: var(--vinho); }
-  #como-funciona .section-label { color: var(--rose); }
-  #como-funciona .section-title { color: var(--white); }
-  #como-funciona .section-title em { color: var(--rose); }
-  #como-funciona .section-lead { color: rgba(255,255,255,0.65); }
+  #processo-analitico { background: var(--vinho); }
+  #processo-analitico .section-label { color: var(--rose); }
+  #processo-analitico .section-title { color: var(--white); }
+  #processo-analitico .section-title em { color: var(--rose); }
+  #processo-analitico .section-lead { color: rgba(255,255,255,0.65); }
+
+  /* ── COMO FUNCIONA (bege escuro) ── */
+  #como-funciona { background: var(--creme-dk); }
+  #como-funciona .section-label { color: var(--vinho); }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .info-card {
+    background: var(--creme);
+    border-radius: var(--r);
+    padding: 28px 30px;
+  }
+  .info-label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--vinho-lt);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .info-card p {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    color: var(--txt);
+    line-height: 1.4;
+  }
 
   .como-funciona-grid {
     display: grid;
@@ -888,6 +917,14 @@
     letter-spacing: 0.06em;
     text-align: center;
   }
+  .footer-address {
+    display: inline-block;
+    margin-top: 8px;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-address:hover { color: rgba(255,255,255,0.85); }
   .footer-links {
     display: flex; gap: 24px; list-style: none;
   }
@@ -945,6 +982,7 @@
     /* ── AJUSTES DE GRID ORIGINAIS DO 1024px ── */
     .cards-grid { grid-template-columns: repeat(2, 1fr); }
     .como-funciona-grid { grid-template-columns: repeat(2, 1fr); }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
     .steps-layout { grid-template-columns: 1fr; }
     .sobre-layout { grid-template-columns: 1fr; }
     .sobre-img { position: static; max-width: 360px; }
@@ -997,6 +1035,7 @@
     .hero-text-col .hero-sub { text-align: center; margin-bottom: 32px; }
     .cards-grid { grid-template-columns: 1fr; }
     .como-funciona-grid { grid-template-columns: 1fr; }
+    .info-grid { grid-template-columns: 1fr; }
     .contato-wrapper { padding: 48px 28px; border-radius: 20px; }
   }
 </style>
@@ -1008,9 +1047,11 @@
   <a href="#hero" class="nav-logo"><img src="logo.png" alt="Renata Razera Psicanalista" style="height:55px;width:auto;display:block;"></a>
   <ul class="nav-links">
     <li><a href="#para-quem">Para quem é</a></li>
+    <li><a href="#processo-analitico">Processo analítico</a></li>
     <li><a href="#como-funciona">Como funciona</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#faq">Dúvidas</a></li>
+    <li><a href="#contato">Contato</a></li>
     <li><a href="#contato" class="nav-cta">Agendar sessão</a></li>
   </ul>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -1020,6 +1061,7 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="#para-quem" onclick="toggleMenu()">Para quem</a>
+  <a href="#processo-analitico" onclick="toggleMenu()">Processo analítico</a>
   <a href="#como-funciona" onclick="toggleMenu()">Como funciona</a>
   <a href="#sobre" onclick="toggleMenu()">Sobre mim</a>
   <a href="#faq" onclick="toggleMenu()">Dúvidas</a>
@@ -1049,38 +1091,37 @@
 <section id="para-quem">
   <div class="section-inner">
     <p class="section-label reveal">Para quem é</p>
-    <h2 class="section-title reveal reveal-delay-1">A psicanálise é indicada para pessoas que desejam <em>compreender</em> de forma mais profunda seus <em>pensamentos, emoções e comportamentos</em>. 
-</h2>
+    <h2 class="section-title reveal reveal-delay-1">A psicanálise é para quem deseja <em>compreender o que se repete</em> em sua vida e viver com mais <em>verdade diante de si mesmo</em>.</h2>
     <div class="cards-grid">
       <div class="card reveal reveal-delay-1">
         <div class="card-icon"><img src="icon-ansiedade.png" alt="Ansiedade" loading="lazy"></div>
-        <h3>Ansiedade, angústia e depressão</h3>
-        <p>Quando o sofrimento emocional deixa de ser passageiro e sensações de inquietação, tristeza ou esgotamento começam a afetar a forma de viver e parecer difíceis de compreender sozinho.</p>
+        <h3>Quando algo não vai bem</h3>
+        <p>Ansiedade, angústia e outros sinais de sofrimento que interferem na forma de viver, sentir e se relacionar.</p>
       </div>
       <div class="card reveal reveal-delay-2">
         <div class="card-icon"><img src="icon-padroes.png" alt="Padrões" loading="lazy"></div>
-        <h3>Comportamentos repetitivos e/ou autodestrutivos</h3>
-        <p>Relacionamentos que sempre terminam igual, decisões que se repetem, sensações que voltam.</p>
+        <h3>Repetições que atravessam a vida</h3>
+        <p>Escolhas, relações e situações que mudam de cenário, mas parecem levar aos mesmos lugares.</p>
       </div>
       <div class="card reveal reveal-delay-3">
         <div class="card-icon"><img src="icon-depressao.png" alt="Depressão" loading="lazy"></div>
-        <h3>Situações de crise</h3>
-        <p>Momentos em que o sofrimento transborda e as ferramentas habituais parecem não dar conta.&nbsp;&nbsp;</p>
+        <h3>Laços, conflitos e relações</h3>
+        <p>Dificuldades para se aproximar, se afastar ou encontrar um lugar possível nas relações.</p>
       </div>
       <div class="card reveal reveal-delay-1">
         <div class="card-icon"><img src="icon-relacionamentos.png" alt="Relacionamentos" loading="lazy"></div>
-        <h3>Dificuldades nos relacionamentos</h3>
-        <p>Conflitos interpessoais, dificuldade de se aproximar ou de se separar.</p>
+        <h3>Infância e adolescência</h3>
+        <p>Um espaço para crianças e adolescentes diante de questões emocionais, familiares e escolares.</p>
       </div>
       <div class="card reveal reveal-delay-2">
         <div class="card-icon"><img src="icon-transicoes.png" alt="Transições" loading="lazy"></div>
-        <h3>Momentos de transição</h3>
-        <p>Mudanças de carreira, perdas, novos ciclos, momentos em que algo precisa ser pensado com mais cuidado.</p>
+        <h3>Mudanças, perdas e recomeços</h3>
+        <p>Momentos que interrompem o conhecido e exigem outras formas de seguir.</p>
       </div>
       <div class="card reveal reveal-delay-3">
         <div class="card-icon"><img src="icon-autoconhecimento.png" alt="Autoconhecimento" loading="lazy"></div>
-        <h3>Autoconhecimento</h3>
-        <p>Para quem quer entender seus próprios movimentos, desejos e formas de se relacionar com o mundo.</p>
+        <h3>Sair do automático</h3>
+        <p>Para quem percebe que apenas cumprir tarefas e seguir a rotina já não basta e deseja compreender melhor suas escolhas e desejos.</p>
       </div>
     </div>
   </div>
@@ -1133,10 +1174,10 @@
   </div>
 </section>-->
 
-<!-- COMO FUNCIONA -->
-<section id="como-funciona">
+<!-- PROCESSO ANALÍTICO -->
+<section id="processo-analitico">
   <div class="section-inner">
-    <p class="section-label reveal">Como Funciona</p>
+    <p class="section-label reveal">Processo Analítico</p>
     <h2 class="section-title reveal reveal-delay-1">O processo de <em>análise</em></h2>
     <p class="section-lead reveal reveal-delay-2">
       Um espaço sigiloso e acolhedor.
@@ -1144,29 +1185,47 @@
     <div class="como-funciona-grid">
       <div class="beneficio-item reveal">
         <div class="beneficio-num">01</div>
-        <h3>Você fala livremente</h3>
-        <p>A livre associação é um elemento central da psicanálise, uma técnica fundamental criada por Freud. Ela consiste em o paciente falar tudo o que lhe vem à mente, sem censura, sem filtro e sem tentar organizar ou julgar os pensamentos. &nbsp;</p>
+        <h3>Fala</h3>
+        <p>A análise começa pela fala. Um espaço para dizer o que vier à mente, sem a preocupação de organizar, explicar ou encontrar as palavras certas.</p>
       </div>
       <div class="beneficio-item reveal reveal-delay-1">
         <div class="beneficio-num">02</div>
-        <h3>Escuta atenta e qualificada</h3>
-        <p>Intervindo de forma pontual a fim de auxiliar na compreensão de conflitos internos, padrões de comportamento e aspectos inconscientes envolvidos nas vivências de cada um.</p>
+        <h3>Escuta</h3>
+        <p>Na escuta, o analista acompanha aquilo que aparece nas palavras, nos silêncios, nas repetições e nas contradições. Aos poucos, questões que antes passavam despercebidas podem ganhar outros contornos.</p>
       </div>
       <div class="beneficio-item reveal reveal-delay-2">
         <div class="beneficio-num">03</div>
-        <h3>Transformação estrutural</h3>
-        <p>Conteúdos antes desconhecidos ou pouco elaborados tornam-se mais claros, promovendo a possibilidade de mudanças na forma de sentir, pensar e se relacionar,&nbsp;durante e após a análise.</p>
+        <h3>Transformação</h3>
+        <p>É um processo singular, construído ao longo dos encontros, que pode abrir novas possibilidades de escolha e de relação consigo e com os outros.</p>
       </div>
     </div>
-	    <div class="steps-visual reveal">
-        <div class="steps-visual-quote">
-          "Eis uma palavra boa em nossa língua: <span>CURA</span>. Se essa palavra pudesse falar, ela contaria uma história."
-        </div>
-        <div class="steps-visual-line"></div>
-        <p class="steps-visual-caption">DONALD WINNICOTT</p>
+    <div class="steps-visual reveal">
+      <div class="steps-visual-quote">
+        "Eis uma palavra boa em nossa língua: <span>CURA</span>. Se essa palavra pudesse falar, ela contaria uma história."
       </div>
+      <div class="steps-visual-line"></div>
+      <p class="steps-visual-caption">DONALD WINNICOTT</p>
+    </div>
   </div>
-	</section>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Como <em>funciona</em></h2>
+    <p class="section-lead reveal reveal-delay-2">
+      A primeira conversa é um momento para nos conhecermos e percebermos se o que você busca encontra lugar na minha forma de trabalhar.
+    </p>
+    <div class="info-grid">
+      <div class="info-card reveal"><span class="info-label">Formato</span><p>Online (videochamada) ou presencial</p></div>
+      <div class="info-card reveal reveal-delay-1"><span class="info-label">Presencial</span><p>Cruzeiro/SP</p></div>
+      <div class="info-card reveal reveal-delay-2"><span class="info-label">Duração</span><p>50 minutos por sessão</p></div>
+      <div class="info-card reveal"><span class="info-label">Público</span><p>Crianças, adolescentes e adultos</p></div>
+      <div class="info-card reveal reveal-delay-1"><span class="info-label">Abordagem</span><p>Psicanálise, escuta singular</p></div>
+      <div class="info-card reveal reveal-delay-2"><span class="info-label">Valores</span><p>Definidos no primeiro contato, na primeira sessão, que é gratuita</p></div>
+    </div>
+  </div>
+</section>
 
 
 <div class="divider"></div>
@@ -1254,7 +1313,7 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-a"><div class="faq-a-inner">
-            O valor é definido individualmente, combinado diretamente na primeira sessão, que é gratuita.
+            O valor é definido no primeiro contato, na primeira sessão, que é gratuita.
           </div></div>
         </div>
 		 <div class="faq-item reveal">
@@ -1309,6 +1368,17 @@
           </div>
           <div class="channel-arrow">→</div>
         </a>
+        <!-- E-mail -->
+        <a href="mailto:rerazera@gmail.com" class="channel-btn">
+          <div class="channel-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div class="channel-info">
+            <div class="channel-label">E-mail</div>
+            <div class="channel-value">rerazera@gmail.com</div>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
         <!-- Agendamento -->
        
       </div>
@@ -1319,8 +1389,10 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Renata Razera</div>
-  <p class="footer-copy">© 2026 Renata Razera · Psicanalista<br>
-  Atendimento on-line e Presencial</p>
+  <div class="footer-copy">
+    <p>© 2026 Renata Razera · Psicanalista<br>Atendimento on-line e presencial</p>
+    <a class="footer-address" href="https://www.google.com/maps/search/?api=1&query=R.+Cap.+Avelino+Bastos,+756+-+Centro,+Cruzeiro+-+SP" target="_blank" rel="noopener">CenttralMed · R. Cap. Avelino Bastos, 756 – Centro, Cruzeiro/SP</a>
+  </div>
   <ul class="footer-links">
     <li><a href="#para-quem">Para quem é</a></li>
     <li><a href="#sobre">Sobre</a></li>
